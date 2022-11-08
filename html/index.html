@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Slicing</title>
   <link rel="stylesheet" href="../src/alertkeun.css">
-  <link rel="stylesheet" href="../node_modules/the-new-css-reset/css/reset.css">
 </head>
 <body>
   
+  <div class="wraper" style="width: 100%; text-align: center;">
+    <button class="btn-modal" data-mk-target="modal1">Modal 1</button>
+  </div>
 
   <!-- modals success -->
-  <div class="modalskeun modal-success">
+  <div class="modalskeun modal-success" id="modal1">
     <div class="modal-content">
       <div class="modal-header">
         <div class="circle">
@@ -28,7 +30,7 @@
         <p>Your order is complete, have a nice day</p>
       </div>
       <div class="modal-footer">
-        <button>Continue</button>
+        <button class="close-btn" data-mk-dismiss="modal">Continue</button>
         <svg width="100%" height="173" viewBox="0 0 475 173" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill="#000000"  d="M0 101.768L8.80729 89.8954C17.5816 78.0233 35.2951 54.2792 52.7778 66.1512C70.3594 78.0233 88.0729 125.512 105.556 121.579C123.137 117.35 140.851 62.4412 158.333 30.535C175.915 -1.37123 193.628 -8.79127 211.111 10.7235C228.693 30.535 246.406 78.0233 263.889 109.707C281.47 141.094 299.184 157.418 316.667 133.451C334.248 109.93 351.962 46.1171 369.444 34.4676C387.026 22.3729 404.74 62.4412 422.222 81.956C439.804 101.767 457.517 101.768 466.094 101.768H475V173H466.193C457.418 173 439.705 173 422.222 173C404.641 173 386.927 173 369.444 173C351.863 173 334.149 173 316.667 173C299.085 173 281.372 173 263.889 173C246.307 173 228.594 173 211.111 173C193.53 173 175.816 173 158.333 173C140.752 173 123.038 173 105.556 173C87.974 173 70.2604 173 52.7778 173C35.1962 173 17.4826 173 8.90625 173H0V101.768Z"fill-opacity="0.4"/>
         </svg>          
