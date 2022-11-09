@@ -97,6 +97,24 @@ meter {
   font-family: 'Poppins', sans-serif;
 }
 
+.modalskeun > .modal-dialog >
+.modal-content.modal-success > 
+.modal-footer > 
+svg,
+.modalskeun > .modal-dialog >
+.modal-content.modal-error > 
+.modal-footer > 
+svg ,
+.modalskeun > .modal-dialog >
+.modal-content.modal-info > 
+.modal-footer > 
+svg ,
+.modalskeun > .modal-dialog >
+.modal-content.modal-warning > 
+.modal-footer > 
+svg  {
+  margin-bottom: -3px;
+}
 
 /* ___Animation___ */
 /* @keyframes fade {
@@ -168,19 +186,11 @@ meter {
 
 /* ___modalskeun___ */
 .modalskeun {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0,0,0,0);
-  justify-content: center;
-  align-items: center;
-  animation:  fade .5s forwards;
-  position: fixed;
-  top: 0;
-  z-index: 3;
+  border: none;
 }
 
-.modalskeun > .modal-content {
+.modalskeun > .modal-dialog >
+.modal-content {
   display: block;
   width: 330px;
   height: 370px;
@@ -190,7 +200,8 @@ meter {
   opacity: 1;
 }
 
-.modalskeun > .modal-content::before {
+.modalskeun > .modal-dialog >
+.modal-content::before {
   content: '';
   display: block;
   width: 100%;
@@ -200,40 +211,58 @@ meter {
 }
 
 .circle {
-  display: block;
+  display: flex;
   border-radius: 100%;
   background-color: #000;
   text-align: center;
-  width: 100px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
   position: absolute;
   left: 0;
   right: 0;
-  top: -55px;
+  top: -40px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
-.modalskeun > .modal-content > .modal-body {
+.modalskeun > .modal-dialog >
+.modal-content > 
+.modal-body {
   display: block;
   width: 100%;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 20px;
 }
-.modalskeun > .modal-content > .modal-body > h1,
-.modalskeun > .modal-content > .modal-body > p {
+.modalskeun > .modal-dialog >
+.modal-content > 
+.modal-body > 
+h1,
+.modalskeun > .modal-dialog >
+.modal-content > 
+.modal-body > 
+p {
   margin-left: 15px;
   margin-right: 15px;
 }
-.modalskeun > .modal-content > .modal-body > h1 {
+.modalskeun > .modal-dialog >
+.modal-content > 
+.modal-body > h1 {
   font-size: 40px;
   font-weight: 600;
 }
 
-.modalskeun > .modal-content > .modal-body > p {
+.modalskeun > .modal-dialog >
+.modal-content > 
+.modal-body > p {
   font-size: 25px;
   font-weight: 500;
 }
 
-.modalskeun > .modal-content > .modal-footer {
+.modalskeun > .modal-dialog >
+.modal-content > 
+.modal-footer {
   width: 100%;
   height: 200px;
   display: flex;
@@ -242,10 +271,12 @@ meter {
   bottom: 0;
   overflow: hidden;
   border-radius:0 0 20px 20px ;
-  /* border: 1px solid black; */
 }
 
-.modalskeun > .modal-content > .modal-footer > button {
+.modalskeun > .modal-dialog >
+.modal-content > 
+.modal-footer > 
+button {
   font-size: 25px;
   background-color: #000;
   color: #fff;
@@ -260,8 +291,147 @@ meter {
   bottom: 35px;
 }
 
-.modalskeun > .modal-content > .modal-footer > svg {
+.modalskeun > .modal-dialog >
+.modal-content > 
+.modal-footer > 
+svg {
   position: inherit;
   bottom: -30px;
   z-index: 1;
+}
+.modalskeun > .modal-dialog >
+.modal-content
+.modal-header,
+.modalskeun > .modal-dialog >
+.modal-content
+.modal-footer {
+  border: none;
+}
+
+/* ___modal child success___ */
+.modalskeun > .modal-dialog >
+.modal-content.modal-success::before {
+  background-color: #75db92;
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-success > 
+.modal-header  > 
+.circle {
+  background-color: #07B838;
+  box-shadow: 1px 1px 7px 4px rgba(9, 199, 85, 0.58);
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-success > 
+.modal-body {
+  color: #07B838;
+}
+
+.modalskeun > .modal-dialog >
+.modal-content.modal-success > 
+.modal-footer > 
+button {
+  background-color: #07B838;
+  box-shadow: 0px 4px 4px #07B838;
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-success > 
+.modal-footer > 
+svg > path {
+  fill: #75db92;
+}
+
+/* ___modal child error */
+.modalskeun > .modal-dialog >
+.modal-content.modal-error::before {
+  background-color: #d39595;
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-error > 
+.modal-header  > 
+.circle {
+  background-color: #C70909;
+  box-shadow: 1px 1px 7px 4px rgba(199, 9, 9, 0.58);
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-error > 
+.modal-body {
+  color: #C70909;
+}
+
+.modalskeun > .modal-dialog >
+.modal-content.modal-error > 
+.modal-footer > 
+button {
+  background-color: #C70909;
+  box-shadow: 0px 4px 4px #C70909;
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-error > 
+.modal-footer > 
+svg > path {
+  fill: #d39595;
+}
+
+/* ___modal child info */
+.modalskeun > .modal-dialog >
+.modal-content.modal-info::before {
+  background-color: #549adb;
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-info > 
+.modal-header  > 
+.circle {
+  background-color: #096CC7;
+  box-shadow: 1px 1px 7px 4px rgba(9, 108, 199, 0.58);
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-info > 
+.modal-body {
+  color: #096CC7;
+}
+
+.modalskeun > .modal-dialog >
+.modal-content.modal-info > 
+.modal-footer > 
+button {
+  background-color: #096CC7;
+  box-shadow: 0px 4px 4px #096CC7;
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-info > 
+.modal-footer > 
+svg > path {
+  fill: #549adb;
+}
+
+/* ___modal child info */
+.modalskeun > .modal-dialog >
+.modal-content.modal-warning::before {
+  background-color: #e4da7f99;
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-warning > 
+.modal-header  > 
+.circle {
+  background-color: #FA8803;
+  box-shadow:1px 1px 7px 4px rgba(250, 136, 3, 0.58);
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-warning > 
+.modal-body {
+  color: #FA8803;
+}
+
+.modalskeun > .modal-dialog >
+.modal-content.modal-warning > 
+.modal-footer > 
+button {
+  background-color: #FA8803;
+  box-shadow: 0px 4px 4px #FA8803;
+}
+.modalskeun > .modal-dialog >
+.modal-content.modal-warning > 
+.modal-footer > 
+svg > path {
+  fill: #fabd76;
 }
